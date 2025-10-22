@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function MusicList({ setCurrentSong }) {
   const [songs, setSongs] = useState([]);
-  const [search, setSearch] = useState("eminem");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch(`https://itunes.apple.com/search?term=${search}&entity=song&limit=10`)
